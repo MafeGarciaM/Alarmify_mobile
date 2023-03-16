@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".PomodoroIniciado">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_panel"
+        android:layout_width="600dp"
+        android:layout_height="220dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="-100dp"
+        app:cardBackgroundColor="#4B407A"
+        app:cardCornerRadius="1000dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="381dp"
+            android:layout_height="130dp"
+            android:layout_gravity="bottom|center">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/back_button" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="244dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/acme_regular"
+                android:freezesText="false"
+                android:text="Pomodoro"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="40dp" />
+
+            <ImageButton
+                android:id="@+id/btn_save_alarm"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/save_icon" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="258dp"
+        android:layout_gravity="center"
+        android:background="#4B407A"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/acme_regular"
+            android:text="Se ha iniciado el pomodoro "
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="33dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/acme_regular"
+            android:text="¡A concentrarse!"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="33dp" />
+
+        <ImageButton
+            android:id="@+id/btn_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/check" />
+
+    </LinearLayout>
+</LinearLayout>

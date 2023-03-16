@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/header_pomodoro"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".CreateAlarm">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_panel"
+        android:layout_width="600dp"
+        android:layout_height="220dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="-100dp"
+        app:cardBackgroundColor="#4B407A"
+        app:cardCornerRadius="1000dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="381dp"
+            android:layout_height="130dp"
+            android:layout_gravity="bottom|center">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/back_button" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="244dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/acme_regular"
+                android:freezesText="false"
+                android:text="Alarma"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="40dp" />
+
+            <ImageButton
+                android:id="@+id/btn_save_alarm"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/save_icon" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/tiempo"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFEFE"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/texttitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/acme_regular"
+            android:text="Titulo"
+            android:textColor="#636262"
+            android:textSize="20dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmHour"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFEFE"
+        android:baselineAligned="false"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/hours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|top">
+
+                    <EditText
+                        android:id="@+id/number1"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#9E59517B"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:text="10"
+                        android:textAlignment="center"
+                        android:textSize="40dp" />
+
+                    <EditText
+                        android:id="@+id/number2"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="#9E59517B"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:text="00"
+                        android:textAlignment="center"
+                        android:textSize="40dp"
+                        tools:ignore="RtlCompat" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/am_pm"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_am"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#4D59517B"
+                    android:fontFamily="@font/acme_regular"
+                    android:text="am"
+                    android:textSize="11dp" />
+
+                <Button
+                    android:id="@+id/btn_pm"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#5E59517B"
+                    android:fontFamily="@font/acme_regular"
+                    android:text="pm"
+                    android:textSize="11dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/days"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:id="@+id/btn_lun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#9E59517B"
+                android:text="Lun"
+                android:textSize="8dp" />
+
+            <Button
+                android:id="@+id/btn_mar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#9E59517B"
+                android:text="Mar"
+                android:textSize="8dp" />
+
+            <Button
+                android:id="@+id/btn_mie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#9E59517B"
+                android:text="Mie"
+                android:textSize="8dp" />
+
+            <Button
+                android:id="@+id/btn_jue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#9E59517B"
+                android:text="Jue"
+                android:textSize="8dp" />
+
+            <Button
+                android:id="@+id/btn_vie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#9E59517B"
+                android:text="Vie"
+                android:textSize="8dp" />
+
+            <Button
+                android:id="@+id/btn_sab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#9E59517B"
+                android:text="Sab"
+                android:textSize="8dp" />
+
+            <Button
+                android:id="@+id/btn_dom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#9E59517B"
+                android:text="Dom"
+                android:textSize="8dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmRemember"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textRecordar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/acme_regular"
+            android:text="Recordar Alarma"
+            android:textColor="#636262"
+            android:textSize="20dp" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="50dp"
+            android:layout_weight="1"
+            android:textColor="#4B407A"
+            android:textColorHighlight="#4B407A"
+            android:textColorHint="#4B407A"
+            android:textColorLink="#4B407A" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmSound"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textSound"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/acme_regular"
+            android:text="Sonido"
+            android:textColor="#636262"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/btn_sonido"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/arrow__1_" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmVolume"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textVolume"
+            android:layout_width="268dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/acme_regular"
+            android:text="Volumen"
+            android:textColor="#636262"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/volume" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmImage"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textImage"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/acme_regular"
+            android:text="Cargar Imagen"
+            android:textColor="#636262"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/btn_img"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/arrow__1_" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmEvent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textEvent"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/acme_regular"
+            android:text="Asociar Evento"
+            android:textColor="#636262"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/btn_evento"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/arrow__1_" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmRecord"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/textRecord"
+            android:layout_width="191dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/acme_regular"
+            android:text="Pausar con Voz"
+            android:textColor="#636262"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:textColor="#4B407A"
+                android:textColorHighlight="#4B407A"
+                android:textColorHint="#4B407A"
+                android:textColorLink="#4B407A" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="207dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/acme_regular"
+                    android:text="Grabaciones"
+                    android:textAlignment="textEnd"
+                    android:textColor="#000000" />
+
+                <ImageButton
+                    android:id="@+id/btn_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/arrow__1_" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".AvisoExterno">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_panel"
+        android:layout_width="600dp"
+        android:layout_height="220dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="-100dp"
+        app:cardBackgroundColor="#4B407A"
+        app:cardCornerRadius="1000dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="381dp"
+            android:layout_height="130dp"
+            android:layout_gravity="bottom|center">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="293dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:fontFamily="@font/acme_regular"
+                android:text="Alarmify"
+                android:textColor="#FFFFFF"
+                android:textSize="40dp" />
+
+            <ImageView
+                android:id="@+id/alarm_icon"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/icon_alarmify" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="90dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="352dp"
+        android:layout_gravity="center"
+        android:background="#994B407A"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="131dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/acme_regular"
+            android:text="Por favor remitase a la aplicación externa para continuar el proceso"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="33dp" />
+
+        <Button
+            android:id="@+id/btn_aceptar"
+            android:layout_width="147dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:background="#4B407A"
+            android:fontFamily="@font/acme_regular"
+            android:text="Aceptar" />
+    </LinearLayout>
+</LinearLayout>
